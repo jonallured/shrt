@@ -3,10 +3,6 @@
 A personal URL shortener using [Middleman][m] to build an [htaccess file][h]
 with 301 redirects, deployed to [DigitalOcean][d].
 
-[m]: http://middlemanapp.com/
-[h]: http://en.wikipedia.org/wiki/Htaccess
-[d]: https://www.digitalocean.com/
-
 ## Why would you do this?
 
 I wanted a personal URL shortener where I could control every aspect of the
@@ -18,7 +14,6 @@ Well, you have a yml file with your redirects and during the Middleman build
 phase, this file is used to create the [Redirect directives][r] in the htaccess
 file.  That file gets `rsync`ed to the server and Apache takes it from there.
 
-[r]: http://css-tricks.com/snippets/htaccess/301-redirects/
 
 ## No really, how does this work?
 
@@ -54,8 +49,6 @@ static sites and that's outside the scope of this README. If you decided to go
 with DigitalOcean, there's a [good write up][w] that helped me with some of the
 Apache setup, so check that out.
 
-[w]: https://www.digitalocean.com/community/articles/how-to-set-up-apache-virtual-hosts-on-ubuntu-12-04-lts
-
 If you can serve a static site and you can SSH as root to the server, then you
 just need to setup the deploy Rake task by adding a `.env` file to the project
 with your deploy target, something like this:
@@ -68,5 +61,12 @@ That will tell `rsync` where to drop the Middleman site.
 
 ## This is weird and bitly is free...
 
-Totally use bit.ly! This is just something fun I threw together and wanted to
+Totally use [bit.ly][b]! This is just something fun I threw together and wanted to
 share.
+
+[b]: https://bitly.com/
+[d]: https://www.digitalocean.com/
+[h]: http://en.wikipedia.org/wiki/Htaccess
+[m]: http://middlemanapp.com/
+[r]: http://css-tricks.com/snippets/htaccess/301-redirects/
+[w]: https://www.digitalocean.com/community/articles/how-to-set-up-apache-virtual-hosts-on-ubuntu-12-04-lts
