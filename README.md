@@ -1,4 +1,4 @@
-# shrt
+# midman
 
 A personal URL shortener using [Middleman][m] to build an [htaccess file][h]
 with 301 redirects, deployed to [DigitalOcean][d].
@@ -15,8 +15,10 @@ shortened URLs and also it was fun, shutup.
 ## How does this work?
 
 Well, you have a yml file with your redirects and during the Middleman build
-phase, this file is used to create the Redirect directives in the htaccess file.
-That file gets `rsync`ed to the server and Apache takes it from there.
+phase, this file is used to create the [Redirect directives][r] in the htaccess
+file.  That file gets `rsync`ed to the server and Apache takes it from there.
+
+[r]: http://css-tricks.com/snippets/htaccess/301-redirects/
 
 ## No really, how does this work?
 

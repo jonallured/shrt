@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta(charset='utf-8')
+    %meta(content='IE=edge,chrome=1' http-equiv='X-UA-Compatible')
+    %title Jon Dot Zone
+    = stylesheet_link_tag 'style'
+  %body
+    %header
+      %h1 Jon Dot Zone
+      %p.tagline A personal URL shortener
+      %p.elsewhere
+        = link_to 'source', "https://github.com/jonallured/shrt"
+        |
+        = link_to 'jonallured.com', "http://jonallured.com"
+        |
+        = link_to '@jonallured', "https://twitter.com/jonallured"
+
+    %article
+      %ul
+        - for link in data.links do
+          %li= link_to "jon.zone/#{link.short}", "http://jon.zone/#{link.short}"
