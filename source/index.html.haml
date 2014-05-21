@@ -1,0 +1,18 @@
+---
+title: Welcome to Middleman
+---
+
+%header
+  %h1 Jon Dot Zone
+  %p.tagline A personal URL shortener
+  %p.elsewhere
+    = link_to 'view source', "https://github.com/jonallured/shrt"
+    |
+    = link_to 'jonallured.com', "http://jonallured.com"
+    |
+    = link_to '@jonallured', "https://twitter.com/jonallured"
+
+%article
+  %ul
+    - for link in data.links do
+      %li= link_to "jon.zone/#{link.short}", "http://jon.zone/#{link.short}"
