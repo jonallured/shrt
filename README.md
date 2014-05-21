@@ -20,22 +20,16 @@ That file gets `rsync`ed to the server and Apache takes it from there.
 
 ## No really, how does this work?
 
-Ok, so you want to add a redirect, here's how you do it:
+Ok, so you want to add a redirect - here's how:
 
-1. Add your redirect to the `data/links.yml` file
+Add your redirect to the `data/links.yml` file
 
-```yml
+```yaml
 - short: me
   long: http://jonallured.com
 ```
 
-2. Build the site:
-
-```shell
-$ middleman build
-```
-
-3. Deploy the site:
+Deploy the site:
 
 ```sh
 $ rake deploy
@@ -54,7 +48,11 @@ with your shortened URLs. Point that sucker at your server and wait for the DNS
 gnomes to do their thing.
 
 From there, things get a little fuzzy - you need to setup your server to serve
-static sites and that's outside the scope of this README.
+static sites and that's outside the scope of this README. If you decided to go
+with DigitalOcean, there's a [good write up][w] that helped me with some of the
+Apache setup, so check that out.
+
+[w]: https://www.digitalocean.com/community/articles/how-to-set-up-apache-virtual-hosts-on-ubuntu-12-04-lts
 
 If you can serve a static site and you can SSH as root to the server, then you
 just need to setup the deploy Rake task by adding a `.env` file to the project
@@ -65,3 +63,8 @@ DEPLOY_TARGET=root@123.456.1.1:/var/www/path/to/site
 ```
 
 That will tell `rsync` where to drop the Middleman site.
+
+## This is weird and bitly is free...
+
+Totally use bit.ly! This is just something fun I threw together and wanted to
+share.
