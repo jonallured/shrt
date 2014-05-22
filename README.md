@@ -59,6 +59,13 @@ DEPLOY_TARGET=root@123.456.1.1:/var/www/path/to/site
 
 That will tell `rsync` where to drop the Middleman site.
 
+## But wait, where are the stats??
+
+Here's the great thing about this aproach - Apache is really good at writing log
+files, so if you want to know how many time a particular redirect has been used,
+you simply parse those logs. Take a look at the `report.rb` script and you'll
+see what I use.
+
 ## This is weird and bitly is free...
 
 Totally use [bit.ly][b]! This is just something fun I threw together and wanted to
