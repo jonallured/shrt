@@ -4,7 +4,41 @@
     %meta(charset='utf-8')
     %meta(content='IE=edge,chrome=1' http-equiv='X-UA-Compatible')
     %title Jon Dot Zone
-    = stylesheet_link_tag 'style'
+    :sass
+      body
+        background-color: #5c4471
+        color: #111
+        font-family: courier
+        font-size: 30px
+        margin: 0
+        padding: 0
+        text-align: center
+
+      header
+        margin: 40px 0
+
+      h1
+        font-size: 2.5em
+        margin: 0
+
+      .tagline
+        margin: 5px 0 10px
+
+      .elsewhere
+        font-size: 0.8em
+        margin-top: 15px
+
+      p
+        font-size: 1.25em
+
+      a
+        color: #111
+
+      ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+
   %body
     %header
       %h1 Jon Dot Zone
