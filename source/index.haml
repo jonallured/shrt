@@ -52,6 +52,6 @@
 
     %article
       %ul
-        - for link in data.links do
+        - for link in links do
           %li
-            %a(href="http://jon.zone/#{link.short}")= "jon.zone/#{link.short}"
+            %a(href="http://jon.zone/#{link['short']}")= "jon.zone/#{link['short']}"
