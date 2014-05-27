@@ -44,13 +44,14 @@
       %h1 Jon Dot Zone
       %p.tagline A personal URL shortener
       %p.elsewhere
-        = link_to 'source', "https://github.com/jonallured/midman"
+        %a(href='https://github.com/jonallured/midman') source
         |
-        = link_to 'jonallured.com', "http://jonallured.com"
+        %a(href='http://jonallured.com') jonallured.com
         |
-        = link_to '@jonallured', "https://twitter.com/jonallured"
+        %a(href='https://twitter.com/jonallured') @jonallured
 
     %article
       %ul
         - for link in data.links do
-          %li= link_to "jon.zone/#{link.short}", "http://jon.zone/#{link.short}"
+          %li
+            %a(href="http://jon.zone/#{link.short}")= "jon.zone/#{link.short}"
