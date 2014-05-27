@@ -1,7 +1,7 @@
-# midman
+# shrt
 
-A personal URL shortener using [Middleman][m] to build an [htaccess file][h]
-with 301 redirects, deployed to [DigitalOcean][d].
+A personal URL shortener that builds an [htaccess file][h] with 301 redirects,
+deployed to [DigitalOcean][d].
 
 ## Why would you do this?
 
@@ -10,10 +10,9 @@ shortened URLs and also it was fun, shutup.
 
 ## How does this work?
 
-Well, you have a yml file with your redirects and during the Middleman build
-phase, this file is used to create the [Redirect directives][r] in the htaccess
-file.  That file gets `rsync`ed to the server and Apache takes it from there.
-
+Its easy - there's a yml file with your redirects and a `build` rake task writes
+[Redirect directives][r] for each one in a htaccess file. That file gets
+`rsync`ed to the server and Apache takes it from there.
 
 ## No really, how does this work?
 
@@ -57,7 +56,7 @@ with your deploy target, something like this:
 DEPLOY_TARGET=root@123.456.1.1:/var/www/path/to/site
 ```
 
-That will tell `rsync` where to drop the Middleman site.
+That will tell `rsync` where to drop the site.
 
 ## But wait, where are the stats??
 
@@ -74,6 +73,5 @@ share.
 [b]: https://bitly.com/
 [d]: https://www.digitalocean.com/
 [h]: http://en.wikipedia.org/wiki/Htaccess
-[m]: http://middlemanapp.com/
 [r]: http://css-tricks.com/snippets/htaccess/301-redirects/
 [w]: https://www.digitalocean.com/community/articles/how-to-set-up-apache-virtual-hosts-on-ubuntu-12-04-lts
