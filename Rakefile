@@ -21,7 +21,7 @@ task :build do
 
   binding = Namespace.new.get_binding
 
-  Dir.mkdir 'build'
+  Dir.mkdir 'build' unless File.directory? 'build'
 
   renderer = ERB.new(File.read('source/.htaccess.erb'), nil, '<>')
   File.write 'build/.htaccess', renderer.result(binding)
