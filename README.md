@@ -48,9 +48,15 @@ static sites and that's outside the scope of this README. If you decided to go
 with DigitalOcean, there's a [good write up][w] that helped me with some of the
 Apache setup, so check that out.
 
-If you can serve a static site and you can SSH as root to the server, then you
-just need to setup the deploy Rake task by adding a `.env` file to the project
-with your deploy target, something like this:
+If you can serve a static site and you can SSH into the server, then you just
+need to setup the deploy Rake task by copying the example dot-env file and
+setting the details:
+
+```
+$ cp .env.example .env
+```
+
+Replace the ssh and path with your details:
 
 ```
 DEPLOY_TARGET=root@123.456.1.1:/var/www/path/to/site
