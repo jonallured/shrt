@@ -64,6 +64,25 @@ DEPLOY_TARGET=root@123.456.1.1:/var/www/path/to/site
 
 That will tell `rsync` where to drop the site.
 
+The last thing is that you have to configure Apache to allow you to use an
+.htaccess file. That's done here:
+
+```
+$ sudo vim /etc/apache2/apache2.conf
+```
+
+And here's the section you want to change:
+
+```
+<Directory /var/www/>
+  Options Indexes FollowSymLinks
+  AllowOverride All
+  Require all granted
+</Directory>
+```
+
+It's the `AllowOverride All` part that does the trick.
+
 ## But wait, where are the stats??
 
 Here's the great thing about this aproach - Apache is really good at writing log
