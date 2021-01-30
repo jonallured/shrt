@@ -16,6 +16,10 @@ task :build do
       YAML.load File.read 'data/links.yml'
     end
 
+    def posts
+      YAML.load File.read 'data/posts.yml'
+    end
+
     def get_binding; binding end
   end
 

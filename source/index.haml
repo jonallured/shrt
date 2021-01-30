@@ -17,9 +17,15 @@
       header
         margin: 40px 0
 
+      article
+        margin-bottom: 40px
+
       h1
         font-size: 2.5em
         margin: 0
+
+      h2
+        margin-bottom: 0
 
       .tagline
         margin: 5px 0 10px
@@ -51,7 +57,14 @@
         %a(href='https://twitter.com/jonallured') @jonallured
 
     %article
+      %h2 general
       %ul
         - for link in links do
           %li
             %a(href="http://jon.zone/#{link['short']}")= "jon.zone/#{link['short']}"
+
+      %h2 blog posts
+      %ul
+        - for post in posts do
+          %li
+            %a(href="http://jon.zone/#{post['short']}")= "jon.zone/#{post['short']}"

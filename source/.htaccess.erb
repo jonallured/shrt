@@ -2,3 +2,6 @@ ErrorDocument 404 /index.html
 <% for link in links %>
 Redirect 301 /<%= link['short'] %> <%= link['long'] %>
 <% end %>
+<% for post in posts %>
+Redirect 301 /<%= post['short'] %> <%= post['long'] %>
+<% end %>
