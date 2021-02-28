@@ -1,13 +1,14 @@
+---
 - short: post-1
   long: https://www.jonallured.com/posts/2009/12/25/finding-the-mouse-position-when-an-event-fires.html
 - short: post-2
   long: https://www.jonallured.com/posts/2009/12/30/quicksilver-on-snow-leopard.html
 - short: post-3
   long: https://www.jonallured.com/posts/2011/04/30/using-devise-for-admin-accounts.html
-- short: post-5
-  long: https://www.jonallured.com/posts/2011/08/08/keeping-a-live-website-in-sync-with-a-local-version-part-two.html
 - short: post-4
   long: https://www.jonallured.com/posts/2011/08/08/keeping-a-live-website-in-sync-with-a-local-version-part-one.html
+- short: post-5
+  long: https://www.jonallured.com/posts/2011/08/08/keeping-a-live-website-in-sync-with-a-local-version-part-two.html
 - short: post-6
   long: https://www.jonallured.com/posts/2011/11/28/playing-around-with-content-editable-in-rails.html
 - short: post-7
