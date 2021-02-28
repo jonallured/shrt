@@ -3,6 +3,8 @@ require 'erb'
 require 'haml'
 require 'yaml'
 
+Rake.add_rakelib 'lib/tasks'
+
 desc 'Deploy site'
 task deploy: :build do
   Dotenv.load
