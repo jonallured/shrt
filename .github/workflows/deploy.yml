@@ -1,0 +1,27 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/known_hosts
+          touch ~/.ssh/id_rsa
+          chmod -R 700 ~/.ssh
+      - name: Add SSH key
+        run: echo "${{ secrets.SHRT_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+      - name: Scan server keys
+        run: ssh-keyscan jon.zone >> ~/.ssh/known_hosts
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Deploy site
+        env:
+          DEPLOY_TARGET: ${{ secrets.DEPLOY_TARGET }}
+        run: bundle exec rake deploy
