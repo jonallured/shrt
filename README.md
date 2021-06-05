@@ -92,10 +92,10 @@ the deploy rake task on our behalf. Isn't that nice??
 
 ## But wait, where are the stats??
 
-Here's the great thing about this aproach - Apache is really good at writing log
-files, so if you want to know how many time a particular redirect has been used,
-you simply parse those logs. Take a look at the `report.rb` script and you'll
-see what I use.
+Here's the great thing about this approach - Apache is really good at writing
+log files, so if you want to know how many time a particular redirect has been
+used, you simply parse those logs. Take a look at the `report.rb` script and
+you'll see what I use.
 
 ## This is weird and bitly is free...
 
