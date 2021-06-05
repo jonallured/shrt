@@ -83,6 +83,13 @@ And here's the section you want to change:
 
 It's the `AllowOverride All` part that does the trick.
 
+## Automating Deployment
+
+Who has the time to deploy a site themselves - automating deployment is not only
+the cool thing to do, it's the right thing. This project includes a deploy
+GitHub Action Workflow that will trigger on pushes to the main branch and run
+the deploy rake task on our behalf. Isn't that nice??
+
 ## But wait, where are the stats??
 
 Here's the great thing about this aproach - Apache is really good at writing log
