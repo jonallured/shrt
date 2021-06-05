@@ -8,7 +8,8 @@ Rake.add_rakelib 'lib/tasks'
 desc 'Deploy site'
 task deploy: :build do
   Dotenv.load
-  system "rsync -av -e ssh --delete build/ #{ENV['DEPLOY_TARGET']}"
+  command = "rsync -av -e ssh --delete build/ #{ENV['DEPLOY_TARGET']}"
+  system(command, exception: true)
 end
 
 desc 'Build the site'
