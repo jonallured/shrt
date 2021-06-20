@@ -7,3 +7,4 @@ gem 'dotenv'
 gem 'haml'
 gem 'rake'
 gem 'sass'
+gem "standard"
