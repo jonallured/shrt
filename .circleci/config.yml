@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  default:
+    working_directory: ~/shrt
+    docker:
+      - image: circleci/ruby:2.7.1-node
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore bundler cache
+          key: bundler-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Bundle install
+          command: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          name: Save bundler cache
+          key: bundler-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Run tests
+          command: bundle exec rake
+workflows:
+  version: 2
+  default:
+    jobs:
+      - default
