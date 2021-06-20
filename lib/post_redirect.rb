@@ -1,4 +1,4 @@
-require 'yaml'
+require "yaml"
 
 class PostRedirect
   include Comparable
@@ -7,7 +7,7 @@ class PostRedirect
 
   def self.for(path)
     data = File.read(path)
-    yaml = data.split('---')[1]
+    yaml = data.split("---")[1]
     front_matter = YAML.safe_load(yaml)
     post_id = front_matter["id"]
     filename = path.split("/").last
@@ -46,4 +46,3 @@ class PostRedirect
     parts.join("/")
   end
 end
-
