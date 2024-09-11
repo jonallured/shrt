@@ -3,7 +3,7 @@ jobs:
   default:
     working_directory: ~/shrt
     docker:
-      - image: circleci/ruby:2.7.1-node
+      - image: cimg/ruby:3.3.4
     steps:
       - checkout
       - restore_cache:

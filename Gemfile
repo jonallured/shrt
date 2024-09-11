@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby File.read(".tool-versions").split[1]
+ruby file: ".tool-versions"
 
 gem "apache_log_parser"
 gem "dotenv"

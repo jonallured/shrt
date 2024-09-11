@@ -22,7 +22,7 @@ Add your redirect to the `data/links.yml` file
 
 ```yaml
 - short: me
-  long: http://jonallured.com
+  long: https://www.jonallured.com
 ```
 
 Deploy the site:
@@ -32,7 +32,7 @@ $ rake deploy
 ```
 
 That's it!! Now when you request `example.com/me` it will redirect to
-`http://jonallured.com` using a 301 redirect from your Apache server.
+`https://www.jonallured.com` using a 301 redirect from your Apache server.
 
 ## What do I do to set this up?
 

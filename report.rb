@@ -12,6 +12,6 @@ end
 
 requests.each do |code, resources|
   puts code
-  counts = resources.each_with_object(Hash.new(0)) { |r, memo| memo[r] += 1; }
+  counts = resources.each_with_object(Hash.new(0)) { |r, memo| memo[r] += 1 }
   counts.sort.each { |count| puts count.join(" - ") }
 end

@@ -4,7 +4,7 @@ set -e
 
 git ensure-main
 
-labels="automerge,dependencies"
+labels="dependencies"
 message=$(cat <<"END"
 Dependency Updates
 
