@@ -1,4 +1,7 @@
-# shrt
+# shrt [![main status][badge]][actions]
+
+[badge]: https://github.com/jonallured/shrt/actions/workflows/main.yml/badge.svg
+[actions]: https://github.com/jonallured/shrt/actions
 
 A personal URL shortener that builds an [htaccess file][h] with 301 redirects,
 deployed to [DigitalOcean][d].
