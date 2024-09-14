@@ -11,60 +11,45 @@
         background-color: #fff
         color: #333
         font-family: courier
-        font-size: 30px
-        margin: 0
+        font-size: 26px
+        line-height: 38px
+        margin: 0 0 40px
         padding: 0
         text-align: center
-
-      header
-        margin: 40px 0
-
-      article
-        margin-bottom: 40px
-
-      h1
-        font-size: 2.5em
-        margin: 0
-
-      h2
-        margin-bottom: 10px
-
-      .tagline
-        margin: 5px 0 10px
-
-      .elsewhere
-        font-size: 0.8em
-        margin-top: 15px
-
-      p
-        font-size: 1.25em
-
       a
         color: #00f
-
+      h1
+        font-size: 68px
+        line-height: 80px
+        margin-bottom: 0
+      p
+        margin-top: 0
+      h2
+        font-size: 48px
+        line-height: 58px
+        margin-bottom: 0
       ul
         list-style-type: none
         margin: 0
         padding: 0
 
   %body
-    %header
-      %h1 Jon Dot Zone
-      %p.tagline A personal URL shortener
-      %p.elsewhere
-        %a(href='https://github.com/jonallured/shrt') source
-        |
-        %a(href='https://www.jonallured.com') jonallured.com
+    %h1 Jon Dot Zone
+    %p
+      A personal URL shortener
+      %br
+      %a(href='https://github.com/jonallured/shrt') source
+      |
+      %a(href='https://www.jonallured.com') jonallured.com
 
-    %article
-      %h2 general
-      %ul
-        - for link in links do
-          %li
-            %a(href="https://jon.zone/#{link['short']}")= "jon.zone/#{link['short']}"
+    %h2 general
+    %ul
+      - for link in links do
+        %li
+          %a(href="https://jon.zone/#{link['short']}")= "jon.zone/#{link['short']}"
 
-      %h2 blog posts
-      %ul
-        - for post in posts do
-          %li
-            %a(href="https://jon.zone/#{post['short']}")= "jon.zone/#{post['short']}"
+    %h2 blog posts
+    %ul
+      - for post in posts do
+        %li
+          %a(href="https://jon.zone/#{post['short']}")= "jon.zone/#{post['short']}"
