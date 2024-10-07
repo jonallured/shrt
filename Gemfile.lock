@@ -64,7 +64,7 @@ GEM
     unicode-display_width (2.6.0)
 
 PLATFORMS
-  arm64-darwin-23
+  ruby
 
 DEPENDENCIES
   apache_log_parser
@@ -75,7 +75,7 @@ DEPENDENCIES
   standard
 
 RUBY VERSION
-   ruby 3.3.4p94
+   ruby 3.3.5p100
 
 BUNDLED WITH
-   2.5.18
+   2.5.21
