@@ -3,7 +3,7 @@ GEM
   specs:
     apache_log_parser (1.1.0)
     ast (2.4.2)
-    dotenv (3.1.2)
+    dotenv (3.1.4)
     ffi (1.17.0-arm64-darwin)
     haml (6.3.0)
       temple (>= 0.8.2)
@@ -23,7 +23,7 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     regexp_parser (2.9.2)
-    rexml (3.3.7)
+    rexml (3.3.8)
     rubocop (1.65.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -46,7 +46,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    standard (1.40.0)
+    standard (1.40.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
       rubocop (~> 1.65.0)
@@ -61,10 +61,10 @@ GEM
     temple (0.10.3)
     thor (1.3.2)
     tilt (2.4.0)
-    unicode-display_width (2.5.0)
+    unicode-display_width (2.6.0)
 
 PLATFORMS
-  ruby
+  arm64-darwin-23
 
 DEPENDENCIES
   apache_log_parser
