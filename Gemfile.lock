@@ -4,7 +4,7 @@ GEM
     apache_log_parser (1.1.0)
     ast (2.4.2)
     dotenv (3.1.4)
-    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0)
     haml (6.3.0)
       temple (>= 0.8.2)
       thor
@@ -64,7 +64,7 @@ GEM
     unicode-display_width (2.6.0)
 
 PLATFORMS
-  ruby
+  arm64-darwin-25
 
 DEPENDENCIES
   apache_log_parser
@@ -75,7 +75,7 @@ DEPENDENCIES
   standard
 
 RUBY VERSION
-   ruby 3.3.5p100
+   ruby 3.4.8p72
 
 BUNDLED WITH
-   2.5.21
+   4.0.3
