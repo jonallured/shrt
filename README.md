@@ -1,8 +1,5 @@
 # shrt [![main status][badge]][actions]
 
-[badge]: https://github.com/jonallured/shrt/actions/workflows/main.yml/badge.svg
-[actions]: https://github.com/jonallured/shrt/actions
-
 A personal URL shortener that builds an [htaccess file][h] with 301 redirects,
 deployed to [DigitalOcean][d].
 
@@ -96,16 +93,17 @@ the deploy rake task on our behalf. Isn't that nice??
 ## But wait, where are the stats??
 
 Here's the great thing about this approach - Apache is really good at writing
-log files, so if you want to know how many time a particular redirect has been
-used, you simply parse those logs. Take a look at the `report.rb` script and
-you'll see what I use.
+log files, so if you want to know how many times a particular redirect has been
+used, you simply parse those logs.
 
 ## This is weird and bitly is free...
 
 Totally use [bit.ly][b]! This is just something fun I threw together and wanted to
 share.
 
+[actions]: https://github.com/jonallured/shrt/actions
 [b]: https://bitly.com/
+[badge]: https://github.com/jonallured/shrt/actions/workflows/main.yml/badge.svg
 [d]: https://www.digitalocean.com/
 [h]: http://en.wikipedia.org/wiki/Htaccess
 [r]: http://css-tricks.com/snippets/htaccess/301-redirects/
