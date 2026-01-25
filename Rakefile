@@ -1,6 +1,5 @@
 require "dotenv"
 require "erb"
-require "haml"
 require "yaml"
 require "standard/rake"
 
@@ -29,16 +28,19 @@ end
 
 desc "Build the site"
 task :build do
-  namespace = Namespace.new
-  binding = namespace.get_binding
-
   Dir.mkdir "build" unless File.directory? "build"
 
-  renderer = ERB.new(File.read("source/.htaccess.erb"), trim_mode: "<>")
-  File.write "build/.htaccess", renderer.result(binding)
+  namespace = Namespace.new
+  binding = namespace.get_binding
+  template_paths = %w[source/.htaccess.erb source/index.html.erb]
 
-  engine = Haml::Template.new { File.read("source/index.haml") }
-  File.write "build/index.html", engine.render(namespace)
+  template_paths.each do |template_path|
+    output_path = template_path.gsub("source", "build").gsub(".erb", "")
+    template_data = File.read(template_path)
+    renderer = ERB.new(template_data, trim_mode: "<>")
+    output_data = renderer.result(binding)
+    File.write(output_path, output_data)
+  end
 end
 
 task default: %i[standard build]
