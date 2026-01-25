@@ -28,6 +28,12 @@
         font-size: 42px
         line-height: 58px
         margin-bottom: 0
+      summary
+        font-size: 42px
+        font-weight: bold
+        line-height: 58px
+        margin-bottom: 0
+        margin-top: 1em
       ul
         list-style-type: none
         margin: 0
@@ -48,8 +54,9 @@
         %li
           %a(href="https://jon.zone/#{link['short']}")= "jon.zone/#{link['short']}"
 
-    %h2 blog posts
-    %ul
-      - for post in posts do
-        %li
-          %a(href="https://jon.zone/#{post['short']}")= "jon.zone/#{post['short']}"
+    %details
+      %summary blog posts
+      %ul
+        - for post in posts do
+          %li
+            %a(href="https://jon.zone/#{post['short']}")= "jon.zone/#{post['short']}"
