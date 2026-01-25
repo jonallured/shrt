@@ -3,8 +3,6 @@ require "erb"
 require "yaml"
 require "standard/rake"
 
-Rake.add_rakelib "lib/tasks"
-
 class Namespace
   def links
     YAML.safe_load_file("data/links.yml")
