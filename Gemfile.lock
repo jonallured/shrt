@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    apache_log_parser (1.1.0)
     ast (2.4.2)
     dotenv (3.1.4)
     json (2.7.2)
@@ -52,7 +51,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  apache_log_parser
   dotenv
   rake
   standard
