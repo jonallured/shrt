@@ -26,15 +26,23 @@ end
 
 desc "Build the site"
 task :build do
-  Dir.mkdir "build" unless File.directory? "build"
+  FileUtils.rm_rf("build")
+  FileUtils.mkdir("build")
 
   namespace = Namespace.new
   binding = namespace.get_binding
-  template_paths = %w[source/.htaccess.erb source/index.html.erb]
+  source_paths = Dir.children("source").map { |child| "source/#{child}" }
 
-  template_paths.each do |template_path|
-    output_path = template_path.gsub("source", "build").gsub(".erb", "")
-    template_data = File.read(template_path)
+  source_paths.each do |source_path|
+    output_path = source_path.gsub("source", "build")
+
+    unless source_path.end_with?(".erb")
+      FileUtils.cp(source_path, output_path)
+      next
+    end
+
+    output_path = output_path.gsub(".erb", "")
+    template_data = File.read(source_path)
     renderer = ERB.new(template_data, trim_mode: "<>")
     output_data = renderer.result(binding)
     File.write(output_path, output_data)

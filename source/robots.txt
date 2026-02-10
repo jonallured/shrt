@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://jon.zone/sitemap.xml
